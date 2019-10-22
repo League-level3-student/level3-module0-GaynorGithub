@@ -9,18 +9,26 @@ public class MoreArrayFun {
 		String[] strings = {"Waffle","Pizza","Josh","Jackie","Saw","Snow","Tundra","Cabin"};
 		
 		printStrings(strings);
-		reverseStrings(strings);
-		everyOther(strings);
-		randomStrings(strings);
+		//reverseStrings(strings);
+		//everyOther(strings);
+		//randomStrings(strings);
 		
 	}
 	
 	
 	//2. Write a method that takes an array of Strings and prints all the Strings in the array.
 	public static void printStrings(String[] strings) {
-		for (int i = 0; i < strings.length; i++) {
-			System.out.println(strings[i]);
+		//for (int i = 0; i < strings.length; i++) {
+		//	System.out.println(strings[i]);
+		//}
+		int[] arr = new int[5];
+		for(int i = 0; i < arr.length; i++){
+		  arr[i] = i;
 		}
+		
+		System.out.println(arr[5]);
+
+		System.out.println("");
 	}
 	
 	
@@ -28,17 +36,22 @@ public class MoreArrayFun {
 	//   in reverse order.
 	
 	public static void reverseStrings(String[] strings) {
-		for (int i = strings.length; i < 0; i--) {
-			System.out.println(strings[i]);
+		for (int i = 0; i < strings.length; i++) {
+			System.out.println(strings[7-i]);
 		}
+		System.out.println("");
+		
 	}
 	
 	
 	//4. Write a method that takes an array of Strings and prints every other String in the array.
 	public static void everyOther(String[] strings) {
 		for (int i = 0; i < strings.length; i++) {
-			System.out.println(strings[i%2]);
+			if(i%2 == 1) {
+				System.out.println(strings[i]);
+			}
 		}
+		System.out.println("");
 	}
 	
 	//5. Write a method that takes an array of Strings and prints all the Strings in the array
@@ -56,6 +69,7 @@ public class MoreArrayFun {
 				amount--;
 			}
 		}
+		System.out.println("");
 	}
 	
 }
